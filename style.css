@@ -1,0 +1,224 @@
+/* latin */
+@font-face {
+    font-family: 'Gloria Hallelujah';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gloria Hallelujah'), local('GloriaHallelujah'), url(https://fonts.gstatic.com/s/gloriahallelujah/v10/LYjYdHv3kUk9BMV96EIswT9DIbW-MIS11zM.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Dosis Regular'), local('Dosis-Regular'), url(https://fonts.gstatic.com/s/dosis/v8/HhyaU5sn9vOmLzlmC_W6EQ.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Dosis Regular'), local('Dosis-Regular'), url(https://fonts.gstatic.com/s/dosis/v8/HhyaU5sn9vOmLzloC_U.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+.background {
+    background-color: #F4D78B
+}
+
+.banner {
+    background-color: #4B201D;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Gloria Hallelujah';
+}
+
+h1 {
+    font-size: 30pt;
+    padding: 0;
+}
+
+h2 {
+    font-size: 20pt;
+}
+
+h3 {
+    font-family: 'Gloria Hallelujah';
+    font-size: 16pt;
+    color: #4B201D;
+}
+
+
+.rules {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.leftalign {
+    display: inline-block;
+    text-align: left;
+}
+
+.character-box {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    height: 150px;
+    width: 150px;
+    border: rgba(83, 69, 69, 0.562);
+    background-color: #F4D78B;
+}
+
+.character-name-box {
+    margin: auto;
+    height: 30px;
+    width: 150px;
+    background-color: #DDC8C8;
+    font-size: 10pt;
+    border-color: rgba(83, 69, 69, 0.562);
+    line-height: 1em;
+}
+
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 20px;
+
+}
+
+.grid-item {
+    background-color: #D72424;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 1px 3px;
+    width: 170px;
+    height: 200px;
+}
+
+li {
+    text-align: left;
+    font-family: 'Dosis';
+    font-size: 15pt;
+    color: #4B201D;
+}
+
+.results-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.result-box {
+    display: grid;
+    justify-content: center;
+    background-color: #C4C4C4;
+    max-height: 200px;
+    min-width: 200px;
+    max-width: 300px;
+    min-height: 150px;
+    box-shadow: 1px 2px;
+}
+
+h4 {
+    color: black;
+    font-family: 'Gloria Hallelujah';
+    font-size: 20px;
+}
+
+.result-title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.result-number {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: whitesmoke;
+    color: rgb(29, 27, 27);
+    font-family: 'Gloria Hallelujah';
+    font-size: 50px;
+    height: 70px;
+    width: 70px;
+    border-color: rgb(90, 88, 88);
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.final-result {
+    /* display: none; */
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Gloria Hallelujah';
+    color: black;
+}
+
+.reset-button {
+    background-color: #4B201D;
+    color: white;
+    border: 2px solid #4B201D;
+    border-radius: 8px;
+    font-family: 'Gloria Hallelujah';
+    font-size: 25pt;
+    padding: 10px;
+}
+
+.reset-button:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.reset-button-container {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.invisible_button {
+    background-color: #F4D78B;
+    border: #F4D78B;
+}
+
+
+#blank_square {
+    background-color: #4B201D;
+    height: 150px;
+    width: 150px;
+}
+
+#final_result_win {
+    visibility: hidden;
+}
+
+#final_result_lose {
+    visibility: hidden;
+}

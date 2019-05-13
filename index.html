@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Link to personal CSS -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+    <!-- link to Microsoft jQuery library -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
+
+    <title>Total Rickall</title>
+</head>
+
+<body>
+
+    <div class="background">
+
+        <div class="container-fluid banner">
+            <h1><strong>Total Rickall</strong></h1>
+            <h2>A Total Rip-Off Game</h2>
+        </div>
+
+        <div class="container rules">
+            <h3><u>How to play:</u></h3>
+            <div class="leftalign">
+
+                <ul>
+                    <li>An alien parasite is loose!</li>
+                    <li>Win by killing the parasite and all its spawn.</li>
+                    <li>At the start of the game there are <strong>three real people</strong> and <strong>one
+                            parasite</strong>.
+                    </li>
+                    <li>Kill any wacky, zany characters that suddenly appear by clicking on them.</li>
+                    <li>Be careful: if you accidently kill a real person, two parasites will spawn.</li>
+                    <li>If you make the wrong judgement call and kill off all the real people, you lose.</li>
+                </ul>
+            </div>
+            <h3>Good Luck and don’t be fooled by the fake memories</h3>
+
+        </div>
+
+
+
+        <div class="grid-container">
+
+            <button class="invisible_button" id="button1">
+                <div class="grid-item" id="card1">
+                    <div class="character-box"><img id="image1" height="150px" width="150px"></div>
+                    <div class="character-name-box" id="character-name-1">
+                    </div>
+
+                </div>
+            </button>
+
+            <button class="invisible_button" id="button2">
+                <div class="grid-item" id="card2">
+                    <div class="character-box"><img id="image2" height="150px" width="150px"></div>
+                    <div class="character-name-box" id="character-name-2"></div>
+                </div>
+            </button>
+
+            <button class="invisible_button" id="button3">
+                <div class="grid-item" id="card3">
+                    <div class="character-box"><img id="image3" height="150px" width="150px"></div>
+                    <div class="character-name-box text-wrap" id="character-name-3"></div>
+                </div>
+            </button>
+
+            <button class="invisible_button" id="button4">
+                <div class="grid-item" id="card4">
+                    <div class="character-box"><img id="image4" height="150px" width="150px"></div>
+                    <div class="character-name-box text-wrap" id="character-name-4"></div>
+                </div>
+            </button>
+
+            <button class="invisible_button" id="button5">
+                <div class="grid-item" id="card5">
+                    <div class="character-box"><img id="image5" height="150px" width="150px"></div>
+                    <div class="character-name-box text-wrap" id="character-name-5"></div>
+                </div>
+            </button>
+
+            <button class="invisible_button" id="button6">
+                <div class="grid-item" id="card6">
+                    <div class="character-box"><img id="image6" height="150px" width="150px"></div>
+                    <div class="character-name-box text-wrap" id="character-name-6"></div>
+                </div>
+            </button>
+
+            <button class="invisible_button" id="button7">
+                <div class="grid-item" id="card7">
+                    <div class="character-box"><img id="image7" height="150px" width="150px"></div>
+                    <div class="character-name-box text-wrap" id="character-name-7"></div>
+                </div>
+            </button>
+
+            <button class="invisible_button" id="button8">
+                <div class="grid-item" id="card8">
+                    <div class="character-box"><img id="image8" height="150px" width="150px"></div>
+                    <div class="character-name-box text-wrap" id="character-name-8"></div>
+                </div>
+            </button>
+
+            <button class="invisible_button" id="button9">
+                <div class="grid-item" id="card9">
+                    <div class="character-box"><img id="image9" height="150px" width="150px"></div>
+                    <div class="character-name-box text-wrap" id="character-name-9"></div>
+                </div>
+            </button>
+
+        </div>
+
+
+        <div class="container results-grid">
+            <div class="result-box">
+                <div class="result-title">
+                    <h4>Real People:</h4>
+                </div>
+
+                <div class="container result-number" id="people_remaining">3</div>
+
+
+
+            </div>
+            <div class="result-box">
+                <div class="result-title">
+                    <h4>Parasites:</h4>
+                </div>
+                <div class="container result-number" id="parasites_remaining">1</div>
+
+            </div>
+
+        </div>
+
+        <div class="final-result">
+            <h1 id="final_result_announcement"></h1>
+
+
+        </div>
+
+        <div class="reset-button-container">
+
+            <button class="reset-button" id="reset_game">
+                Play again?
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="./java/main.js"></script>
+    <script type="text/javascript" src="./java/api.js"></script>
+    <!-- <script type="module" src="./java/api.js"></script> -->
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script> -->
+</body>
+
+</html>
