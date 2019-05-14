@@ -1,77 +1,3 @@
-//defines character obejcts
-const human1 = {
-    type: "human1",
-    alive: true,
-    card: 0,
-    image: "",
-    name: ""
-};
-let human2 = {
-    type: "human2",
-    alive: true,
-    card: 0,
-    image: "",
-    name: ""
-};
-let human3 = {
-    type: "human3",
-    alive: true,
-    card: 0,
-    image: "",
-    name: ""
-};
-let parasite1 = {
-    type: "parasite1",
-    alive: true,
-    card: 0,
-    image: "",
-    name: ""
-};
-let parasite2 = {
-    type: "parasite2",
-    alive: false,
-    card: 0,
-    image: "",
-    name: ""
-};
-let parasite3 = {
-    type: "parasite3",
-    alive: false,
-    card: 0,
-    image: "",
-    name: ""
-};
-let parasite4 = {
-    type: "parasite4",
-    alive: false,
-    card: 0,
-    image: "",
-    name: ""
-};
-let parasite5 = {
-    type: "parasite5",
-    alive: false,
-    card: 0,
-    image: "",
-    name: ""
-};
-let parasite6 = {
-    type: "parasite6",
-    alive: false,
-    card: 0,
-    image: "",
-    name: ""
-};
-
-let parasite7 = {
-    type: "parasite7",
-    alive: false,
-    card: 0,
-    image: "",
-    name: ""
-};
-
-
 //execute function that generates a random character from API
 Promise.all([generateCharacter(human1.type, human1.alive), generateCharacter(human2.type, human2.alive), generateCharacter(human3.type, human3.alive), generateCharacter(parasite1.type, parasite1.alive)]);
 
@@ -160,10 +86,6 @@ function generateCharacter(type, alive) {
     }
 }
 
-
-//create array with numbers 1-9 randomised under variable "randomisedArray"
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 //shuffles numbers array into different order returning a new array
 let randomisedArray = shuffle(numbers);
 console.log(randomisedArray);
@@ -218,8 +140,9 @@ function placeCharacter(image, name, type, alive) {
                 allocateSquare(randomisedArray[8]);
                 parasite6.card = randomisedArray[8];
             } else if (type === "parasite7") {
-                allocateSquare(randomisedArray[9]);
-                parasite7.card = randomisedArray[9];
+                human3.card = 0;
+                allocateSquare(randomisedArray[2]);
+                parasite7.card = randomisedArray[2];
             }
         }
 
@@ -316,10 +239,6 @@ function clearCards() {
 
 
 
-//Global variables to establish scores
-let peopleRemaining = 3;
-let parasitesRemaining = 1;
-
 //function to change score human killed
 function ChangeScoreHumanDead() {
     peopleRemaining -= 1;
@@ -366,6 +285,7 @@ function resetCards() {
 function kill(cardNumber) {
 
     if (human1.card === cardNumber) {
+
         human1.alive = false;
         parasite2.alive = true;
         parasite3.alive = true;
@@ -388,6 +308,7 @@ function kill(cardNumber) {
 
 
     } else if (human3.card === cardNumber) {
+
         human3.alive = false;
         parasite6.alive = true;
         parasite7.alive = true;
@@ -434,16 +355,15 @@ function kill(cardNumber) {
         resetCards();
 
     } else if (parasite7.card === cardNumber) {
+        console.log("parasite 7 is clicked")
         parasite7.alive = false;
         console.log("parasite7 is dead");
-        ChangeScoreParasiteDead()
+        ChangeScoreParasiteDead();
         resetCards();
     };
 
     // checkScore();
-
 }
-
 
 
 function resetGame() {
