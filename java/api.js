@@ -106,15 +106,15 @@ function resetCards() {
 //function to execute after button is clicked on - kills character, executing spawn of 2 unique parasites if human.
 function kill(cardNumber) {
 
-    $('#card1').css('visibility', 'hidden');
-    $('#card2').css('visibility', 'hidden');
-    $('#card3').css('visibility', 'hidden');
-    $('#card4').css('visibility', 'hidden');
-    $('#card5').css('visibility', 'hidden');
-    $('#card6').css('visibility', 'hidden');
-    $('#card7').css('visibility', 'hidden');
-    $('#card8').css('visibility', 'hidden');
-    $('#card9').css('visibility', 'hidden');
+    $('#card1').hide();
+    $('#card2').hide();
+    $('#card3').hide();
+    $('#card4').hide();
+    $('#card5').hide();
+    $('#card6').hide();
+    $('#card7').hide();
+    $('#card8').hide();
+    $('#card9').hide();
 
 
     if (human1.card === cardNumber) {

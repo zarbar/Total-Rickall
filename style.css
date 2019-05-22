@@ -94,8 +94,6 @@ h3 {
 
 .character-name-box {
     margin: auto;
-    /* height: 30px;
-    width: 150px; */
     max-height: 30px;
     max-width: 150px;
     min-width: 60px;
@@ -231,37 +229,37 @@ h4 {
 }
 
 #card1 {
-    visibility: hidden
+    display: none;
 }
 
 #card2 {
-    visibility: hidden
+    display: none;
 }
 
 #card3 {
-    visibility: hidden
+    display: none;
 }
 
 #card4 {
-    visibility: hidden
+    display: none;
 }
 
 #card5 {
-    visibility: hidden
+    display: none;
 }
 
 #card6 {
-    visibility: hidden
+    display: none;
 }
 
 #card7 {
-    visibility: hidden
+    display: none;
 }
 
 #card8 {
-    visibility: hidden
+    display: none;
 }
 
 #card9 {
-    visibility: hidden
+    display: none;
 }

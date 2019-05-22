@@ -221,7 +221,7 @@ function placeCharacter(image, name, type, alive) {
             console.log(type + " successfully assigned to square " + randomisedArrayNumber);
             $(placeImage).attr('src', image).show();
             $(placeName).html(name);
-            $(characterCard).css("visibility", "visible");
+            $(characterCard).show();
             //return randomisedArrayNumber
         }
 
