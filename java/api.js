@@ -2,90 +2,6 @@
 Promise.all([generateCharacter(human1.type, human1.alive), generateCharacter(human2.type, human2.alive), generateCharacter(human3.type, human3.alive), generateCharacter(parasite1.type, parasite1.alive)]);
 
 
-
-//generates random number between 1-301 
-function randomApi() {
-    let rdn = Math.floor(Math.random() * 300 + 1);
-    return rdn;
-}
-
-//function that generates random character if status:alive
-
-function generateCharacter(type, alive) {
-    if (alive === true) {
-
-        let endpoint = randomApi().toString();
-        let url = "https://rickandmortyapi.com/api/character/";
-
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": url + endpoint,
-            "method": "GET"
-        }
-
-        //outputs a name and image
-        $.ajax(settings).done(function (response) {
-            const name = response.name;
-            const image = response.image;
-
-            //executes function to assign character to random square whether dead or alive && assigns image and name to character Object
-            if (type === "human1") {
-                human1.name = name;
-                human1.image = image;
-                console.log("human1 = " + name)
-                placeCharacter(image, name, human1.type, human1.alive)
-            } else if (type === "human2") {
-                human2.name = name;
-                human2.image = image;
-                console.log("human2 = " + name)
-                placeCharacter(image, name, human2.type, human2.alive)
-            } else if (type === "human3") {
-                human3.name = name;
-                human3.image = image;
-                console.log("human3 = " + name)
-                placeCharacter(image, name, human3.type, human3.alive)
-            } else if (type === "parasite1") {
-                parasite1.name = name;
-                parasite1.image = image;
-                console.log("parasite1 = " + name)
-                placeCharacter(image, name, parasite1.type, parasite1.alive)
-            } else if (type === "parasite2") {
-                parasite2.name = name;
-                parasite2.image = image;
-                console.log("parasite2 = " + name)
-                placeCharacter(image, name, parasite2.type, parasite2.alive)
-            } else if (type === "parasite3") {
-                parasite3.name = name;
-                parasite3.image = image;
-                console.log("parasite3 = " + name)
-                placeCharacter(image, name, parasite3.type, parasite3.alive)
-            } else if (type === "parasite4") {
-                parasite4.name = name;
-                parasite4.image = image;
-                console.log("parasite4 = " + name)
-                placeCharacter(image, name, parasite4.type, parasite4.alive)
-            } else if (type === "parasite5") {
-                parasite5.name = name;
-                parasite5.image = image;
-                console.log("parasite5 = " + name)
-                placeCharacter(image, name, parasite5.type, parasite5.alive)
-            } else if (type === "parasite6") {
-                parasite6.name = name;
-                parasite6.image = image;
-                console.log("parasite6 = " + name)
-                placeCharacter(image, name, parasite6.type, parasite6.alive)
-            } else if (type === "parasite7") {
-                parasite7.name = name;
-                parasite7.image = image;
-                console.log("parasite7 = " + name)
-                placeCharacter(image, name, parasite7.type, parasite7.alive)
-            };
-
-        })
-    }
-}
-
 //shuffles numbers array into different order returning a new array
 let randomisedArray = shuffle(numbers);
 console.log(randomisedArray);
@@ -104,97 +20,7 @@ function shuffle(array) {
 
 
 //assigns character to random square
-function placeCharacter(image, name, type, alive) {
 
-
-    //will assign if status: alive
-    if (alive === true) {
-
-        //assigns characters to new character card
-        function sendToAllocate() {
-            if (type === "human1") {
-                allocateSquare(randomisedArray[0]);
-                human1.card = randomisedArray[0];
-            } else if (type === "human2") {
-                allocateSquare(randomisedArray[1]);
-                human2.card = randomisedArray[1];
-            } else if (type === "human3") {
-                allocateSquare(randomisedArray[2]);
-                human3.card = randomisedArray[2];
-            } else if (type === "parasite1") {
-                allocateSquare(randomisedArray[3]);
-                parasite1.card = randomisedArray[3];
-            } else if (type === "parasite2") {
-                allocateSquare(randomisedArray[4]);
-                parasite2.card = randomisedArray[4];
-            } else if (type === "parasite3") {
-                allocateSquare(randomisedArray[5]);
-                parasite3.card = randomisedArray[5];
-            } else if (type === "parasite4") {
-                allocateSquare(randomisedArray[6]);
-                parasite4.card = randomisedArray[6];
-            } else if (type === "parasite5") {
-                allocateSquare(randomisedArray[7]);
-                parasite5.card = randomisedArray[7];
-            } else if (type === "parasite6") {
-                allocateSquare(randomisedArray[8]);
-                parasite6.card = randomisedArray[8];
-            } else if (type === "parasite7") {
-                human3.card = 0;
-                allocateSquare(randomisedArray[2]);
-                parasite7.card = randomisedArray[2];
-            }
-        }
-
-        sendToAllocate()
-
-        //allocates characters to card based on random number array
-        function allocateSquare(randomisedArrayNumber) {
-            let theNumber = randomisedArrayNumber.toString();
-            // console.log("the number is " + theNumber);
-            let placeName = "#character-name-" + theNumber;
-            let placeImage = "#image" + theNumber;
-            console.log(type + " successfully assigned to square " + randomisedArrayNumber);
-            $(placeImage).attr('src', image).show();
-            $(placeName).html(name);
-            //return randomisedArrayNumber
-        }
-
-        //removes killed character
-    } else {
-        if (type === "human1") {
-            human1.image = "";
-            human1.name = "";
-        } else if (type === "human2") {
-            human2.image = "";
-            human2.name = "";
-        } else if (type === "human3") {
-            human3.image = "";
-            human3.name = "";
-        } else if (type === "parasite1") {
-            parasite1.image = "";
-            parasite1.name = "";
-        } else if (type === "parasite2") {
-            parasite2.image = "";
-            parasite2.name = "";
-        } else if (type === "parasite3") {
-            parasite3.image = "";
-            parasite3.name = "";
-        } else if (type === "parasite4") {
-            parasite4.image = "";
-            parasite4.name = "";
-        } else if (type === "parasite5") {
-            parasite5.image = "";
-            parasite5.name = "";
-        } else if (type === "parasite6") {
-            parasite6.image = "";
-            parasite6.name = "";
-        } else if (type === "parasite7") {
-            parasite7.image = "";
-            parasite7.name = "";
-        }
-    }
-}
 
 //function to shuffle characters that executes after click
 function afterClick() {
@@ -210,9 +36,6 @@ function afterClick() {
     placeCharacter(parasite6.image, parasite6.name, parasite6.type, parasite6.alive);
     placeCharacter(parasite7.image, parasite7.name, parasite7.type, parasite7.alive);
 
-
-
-    //link here to change score and to game outcomes (not yet done)
 }
 
 //function to clear all id="imageX" and id="character-name-X" after a click so images do not replicate - cleaning the cards for a fresh shuffle
@@ -273,7 +96,6 @@ function checkScore() {
 
 }
 
-
 function resetCards() {
     clearCards();
     shuffle(numbers);
@@ -284,8 +106,18 @@ function resetCards() {
 //function to execute after button is clicked on - kills character, executing spawn of 2 unique parasites if human.
 function kill(cardNumber) {
 
-    if (human1.card === cardNumber) {
+    $('#card1').css('visibility', 'hidden');
+    $('#card2').css('visibility', 'hidden');
+    $('#card3').css('visibility', 'hidden');
+    $('#card4').css('visibility', 'hidden');
+    $('#card5').css('visibility', 'hidden');
+    $('#card6').css('visibility', 'hidden');
+    $('#card7').css('visibility', 'hidden');
+    $('#card8').css('visibility', 'hidden');
+    $('#card9').css('visibility', 'hidden');
 
+
+    if (human1.card === cardNumber) {
         human1.alive = false;
         parasite2.alive = true;
         parasite3.alive = true;
@@ -378,7 +210,6 @@ $(document).ready(
     $('#button1').on('click', function () {
         console.log("card1 clicked");
         kill(1);
-
     }),
     $('#button2').on('click', function () {
         console.log("card2 clicked");
