@@ -73,7 +73,8 @@ let parasite7 = {
     name: ""
 };
 
-
+//create an array of the random card numbers - numbers will be pushed to array to check that number !exist already
+const cardNumbers = [];
 
 //create array with numbers 1-9 randomised under variable "randomisedArray"
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -85,14 +86,22 @@ let parasitesRemaining = 1;
 
 
 //generates random number between 1-301 
-function randomApi() {
+function randomiseCardNumber() {
     let rdn = Math.floor(Math.random() * 300 + 1);
     return rdn;
 }
 
+//prevents duplicate cards from appearing. Triggers randomCardNumber()
+function randomApi() {
+    let rdn = randomiseCardNumber();
+    if (!cardNumbers.includes(rdn)) {
+        cardNumbers.push(rdn);
+        return rdn;
+    }
+    else { randomApi() }
+}
 
-//function that generates random character if status:alive
-
+//generates random character if status: alive
 function generateCharacter(type, alive) {
     if (alive) {
 
@@ -172,7 +181,7 @@ function placeCharacter(image, name, type, alive) {
 
 
     //will assign if status: alive
-    if (alive === true) {
+    if (alive) {
 
         //assigns characters to new character card
         function sendToAllocate() {
