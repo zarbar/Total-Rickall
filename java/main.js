@@ -94,7 +94,7 @@ function randomApi() {
 //function that generates random character if status:alive
 
 function generateCharacter(type, alive) {
-    if (alive === true) {
+    if (alive) {
 
         let endpoint = randomApi().toString();
         let url = "https://rickandmortyapi.com/api/character/";
