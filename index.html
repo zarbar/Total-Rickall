@@ -35,13 +35,15 @@
 
                 <ul>
                     <li>An alien parasite is loose!</li>
-                    <li>Win by killing the parasite and all its spawn.</li>
-                    <li>At the start of the game there are <strong>three real people</strong> and <strong>one
-                            parasite</strong>.
+                    <li>Start with <strong>three humans</strong> and <strong>one parasite</strong>.
                     </li>
-                    <li>Kill any wacky, zany characters that suddenly appear by clicking on them.</li>
-                    <li>Be careful: if you accidently kill a real person, two parasites will spawn.</li>
-                    <li>If you make the wrong judgement call and kill off all the real people, you lose.</li>
+                    <li>You must guess who is the parasite. <strong>Kill</strong> characters <strong>by
+                            clicking</strong> on them.</li>
+                    <!-- <li>Kill any wacky, zany characters that suddenly appear by clicking on them.</li> -->
+                    <li>Be careful: if you <strong>accidently kill a real person, two parasites will spawn</strong>.
+                    </li>
+                    <li>Win by killing the parasite and all its spawn.</li>
+                    <li>If you make the wrong judgement call and kill all the human, you lose.</li>
                 </ul>
             </div>
             <h3>Good Luck and don’t be fooled by the fake memories</h3>
@@ -49,127 +51,117 @@
         </div>
 
 
-
-        <div class="grid-container, justify-content-md-center">
-
-            <div class="row justify-content-center">
-                <div class="col, no-gutters, col-lg-2">
-
-                    <button class="invisible_button" id="button1">
-                        <div class="grid-item" id="card1">
-                            <div class="character-box" id=><img id="image1" class="chara-image"></div>
-                            <div class="character-name-box" id="character-name-1">
-                            </div>
-
+        <!-- card 1 -->
+        <div class="grid-container">
+            <div class="item1">
+                <button class="invisible_button" id="button1">
+                    <div class="grid-item" id="card1">
+                        <div class="character-box" id=><img id="image1" class="chara-image"></div>
+                        <div class="character-name-box text-wrap text-break" id="character-name-1">
                         </div>
-                    </button>
-                </div>
-
-                <div class="col, no-gutters, col-lg-2">
-
-                    <button class="invisible_button" id="button2">
-                        <div class="grid-item" id="card2">
-                            <div class="character-box"><img id="image2" class="chara-image"></div>
-                            <div class="character-name-box" id="character-name-2"></div>
-                        </div>
-                    </button>
-                </div>
-
-                <div class="col, no-gutters, col-lg-2">
-
-                    <button class="invisible_button" id="button3">
-                        <div class="grid-item" id="card3">
-                            <div class="character-box"><img id="image3" class="chara-image"></div>
-                            <div class="character-name-box text-wrap" id="character-name-3"></div>
-                        </div>
-                    </button>
-                </div>
-
-            </div>
-            <div class="row justify-content-center">
-
-                <div class="col, no-gutters, col-lg-2">
-
-                    <button class="invisible_button" id="button4">
-                        <div class="grid-item" id="card4">
-                            <div class="character-box"><img id="image4" class="chara-image"></div>
-                            <div class="character-name-box text-wrap" id="character-name-4"></div>
-                        </div>
-                    </button>
-
-                </div>
-                <div class="col, no-gutters, col-lg-2">
-
-                    <button class="invisible_button" id="button5">
-                        <div class="grid-item" id="card5">
-                            <div class="character-box"><img id="image5" class="chara-image"></div>
-                            <div class="character-name-box text-wrap" id="character-name-5"></div>
-                        </div>
-                    </button>
-                </div>
-                <div class="col, no-gutters, col-lg-2">
-
-                    <button class="invisible_button" id="button6">
-                        <div class="grid-item" id="card6">
-                            <div class="character-box"><img id="image6" class="chara-image"></div>
-                            <div class="character-name-box text-wrap" id="character-name-6"></div>
-                        </div>
-                    </button>
-                </div>
+                    </div>
+                </button>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col, no-gutters, col-lg-2">
-                    <button class="invisible_button" id="button7">
-                        <div class="grid-item" id="card7">
-                            <div class="character-box"><img id="image7" class="chara-image"></div>
-                            <div class="character-name-box text-wrap" id="character-name-7"></div>
-                        </div>
-                    </button>
-                </div>
-                <div class="col, no-gutters, col-lg-2">
-                    <button class="invisible_button" id="button8">
-                        <div class="grid-item" id="card8">
-                            <div class="character-box"><img id="image8" class="chara-image"></div>
-                            <div class="character-name-box text-wrap" id="character-name-8"></div>
-                        </div>
-                    </button>
-                </div>
-
-                <div class="col, no-gutters, col-lg-2">
-                    <button class="invisible_button" id="button9">
-                        <div class="grid-item" id="card9">
-                            <div class="character-box"><img id="image9" class="chara-image"></div>
-                            <div class="character-name-box text-wrap" id="character-name-9"></div>
-                        </div>
-                    </button>
-                </div>
+            <!-- card 2 -->
+            <div class="item2">
+                <button class="invisible_button" id="button2">
+                    <div class="grid-item" id="card2">
+                        <div class="character-box"><img id="image2" class="chara-image"></div>
+                        <div class="character-name-box text-wrap text-break" id="character-name-2"></div>
+                    </div>
+                </button>
             </div>
 
+
+            <!-- card 3 -->
+            <div class="item3"> <button class="invisible_button" id="button3">
+                    <div class="grid-item" id="card3">
+                        <div class="character-box"><img id="image3" class="chara-image"></div>
+                        <div class="character-name-box text-wrap text-break" id="character-name-3"></div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- card 4 -->
+
+            <div class="item4"><button class="invisible_button" id="button4">
+                    <div class="grid-item" id="card4">
+                        <div class="character-box"><img id="image4" class="chara-image"></div>
+                        <div class="character-name-box text-wrap text-break" id="character-name-4"></div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- card 5 -->
+            <div class="item5"> <button class="invisible_button" id="button5">
+                    <div class="grid-item" id="card5">
+                        <div class="character-box"><img id="image5" class="chara-image"></div>
+                        <div class="character-name-box text-wrap text-break" id="character-name-5"></div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- card 6 -->
+            <div class="item6"> <button class="invisible_button" id="button6">
+                    <div class="grid-item" id="card6">
+                        <div class="character-box"><img id="image6" class="chara-image"></div>
+                        <div class="character-name-box text-wrap text-break" id="character-name-6"></div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- card 7 -->
+
+            <div class="item7"> <button class="invisible_button" id="button7">
+                    <div class="grid-item" id="card7">
+                        <div class="character-box"><img id="image7" class="chara-image"></div>
+                        <div class="character-name-box text-wrap text-break" id="character-name-7"></div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- card 8 -->
+            <div class="item8"> <button class="invisible_button" id="button8">
+                    <div class="grid-item" id="card8">
+                        <div class="character-box"><img id="image8" class="chara-image"></div>
+                        <div class="character-name-box text-wrap text-break" id="character-name-8"></div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- card 9 -->
+            <div class="item8"> <button class="invisible_button" id="button9">
+                    <div class="grid-item" id="card9">
+                        <div class="character-box"><img id="image9" class="chara-image"></div>
+                        <div class="character-name-box text-wrap text-break" id="character-name-9"></div>
+                    </div>
+                </button>
+            </div>
         </div>
 
 
+        <!-- score grid -->
+
         <div class="container results-grid">
-            <div class="row">
-                <div class="col">
-                    <div class="result-box">
-                        <div class="result-title">
-                            <h4>Real People:</h4>
-                        </div>
 
-
-                        <div class="container result-number" id="people_remaining">3</div>
+            <!-- humans remaining -->
+            <div class="col">
+                <div class="result-box">
+                    <div class="result-title">
+                        <h4>Humans:</h4>
                     </div>
-
-
+                    <div class="container result-number" id="people_remaining">3</div>
                 </div>
-                <div class="col">
-                    <div class="result-box">
-                        <div class="result-title">
-                            <h4>Parasites:</h4>
-                        </div>
-                        <div class="container result-number" id="parasites_remaining">1</div>
+            </div>
+
+            <!-- parasites remaining -->
+            <div class="col">
+                <div class="result-box">
+                    <div class="result-title">
+                        <h4>Parasites:</h4>
                     </div>
+                    <div class="container result-number" id="parasites_remaining">1</div>
                 </div>
             </div>
         </div>
