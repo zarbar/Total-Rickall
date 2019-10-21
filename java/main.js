@@ -87,7 +87,7 @@ let parasitesRemaining = 1;
 
 //generates random number between 1-301 
 function randomiseCardNumber() {
-    let rdn = Math.floor(Math.random() * 300 + 1);
+    let rdn = Math.floor(Math.random() * 300) + 1;
     return rdn;
 }
 

@@ -94,6 +94,11 @@ h3 {
     justify-content: center;
 }
 
+#character-grid-font {
+    font-family: 'Lato';
+    font-size: 15pt;
+}
+
 .grid-item {
     background-color: #D72424;
     border: 1px solid rgba(0, 0, 0, 0.8);
@@ -126,7 +131,7 @@ li {
     justify-content: center;
     background-color: #C4C4C4;
     height: auto;
-    width: 200px;
+    width: 100px;
     box-shadow: 1px 2px;
     padding-bottom: 1em;
 
@@ -150,9 +155,9 @@ h4 {
     background-color: whitesmoke;
     color: rgb(29, 27, 27);
     font-family: 'Gloria Hallelujah';
-    font-size: 50px;
-    height: 70px;
-    width: 70px;
+    font-size: 20pt;
+    height: 40px;
+    width: 40px;
     border-color: rgb(90, 88, 88);
     border-style: solid;
     border-radius: 5px;
@@ -205,8 +210,8 @@ h4 {
 }
 
 .chara-image {
-    max-height: 150px;
-    max-width: 150px;
+    max-height: 100px;
+    max-width: 100px;
     height: auto;
     width: auto;
 }
@@ -215,7 +220,7 @@ h4 {
 .character-name-box {
     margin: auto;
     /* max-height: 30px; */
-    width: 150px;
+    width: 100px;
     /* width: auto; */
     height: auto;
     background-color: #DDC8C8;
@@ -228,8 +233,8 @@ h4 {
 .character-box {
     margin-top: 2px;
     margin-bottom: 2px;
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     border: rgba(83, 69, 69, 0.562);
     background-color: #F4D78B;
     text-align: center;
@@ -250,7 +255,7 @@ h4 {
     .grid-item {
         text-align: center;
         padding: 5px;
-        max-width: 90;
+        /* max-width: 90; */
         height: auto;
     }
 
