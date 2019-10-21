@@ -19,11 +19,10 @@ function shuffle(array) {
 }
 
 
-//assigns character to random square
-
-
 //function to shuffle characters that executes after click
 function afterClick() {
+
+    // placeCharacter(character.image, character.name, character.type, character.alive);
 
     placeCharacter(human1.image, human1.name, human1.type, human1.alive);
     placeCharacter(human2.image, human2.name, human2.type, human2.alive);
@@ -36,10 +35,18 @@ function afterClick() {
     placeCharacter(parasite6.image, parasite6.name, parasite6.type, parasite6.alive);
     placeCharacter(parasite7.image, parasite7.name, parasite7.type, parasite7.alive);
 
+    console.log(`h1: ${human1.card}, h2: ${human2.card}, h3: ${human3.card}, p1: ${parasite1.card}, p2: ${parasite2.card}, p3: ${parasite3.card}, p4: ${parasite4.card}, p5: ${parasite5.card}, p6: ${parasite6.card}, p7: ${parasite7.card}`);
+
 }
 
 //function to clear all id="imageX" and id="character-name-X" after a click so images do not replicate - cleaning the cards for a fresh shuffle
 function clearCards() {
+
+    // function clearCard(num){$('#image' + num).attr('src', "").hide();
+    //     $('#character-name-' + num).html("");}
+
+
+
     $('#image1').attr('src', "").hide();
     $('#character-name-1').html("");
     $('#image2').attr('src', "").hide();
@@ -117,7 +124,7 @@ function kill(cardNumber) {
     $('#card9').hide();
 
 
-    if (human1.card === cardNumber) {
+    if (human1.card === cardNumber && human1.alive) {
         human1.alive = false;
         parasite2.alive = true;
         parasite3.alive = true;
@@ -128,7 +135,7 @@ function kill(cardNumber) {
         generateCharacter(parasite3.type, parasite3.alive);
 
 
-    } else if (human2.card === cardNumber) {
+    } else if (human2.card === cardNumber && human2.alive) {
         human2.alive = false;
         parasite4.alive = true;
         parasite5.alive = true;
@@ -139,7 +146,7 @@ function kill(cardNumber) {
         generateCharacter(parasite5.type, parasite5.alive);
 
 
-    } else if (human3.card === cardNumber) {
+    } else if (human3.card === cardNumber && human3.alive) {
 
         human3.alive = false;
         parasite6.alive = true;
@@ -150,43 +157,43 @@ function kill(cardNumber) {
         generateCharacter(parasite6.type, parasite6.alive);
         generateCharacter(parasite7.type, parasite7.alive);
 
-    } else if (parasite1.card === cardNumber) {
+    } else if (parasite1.card === cardNumber && parasite1.alive) {
         parasite1.alive = false;
         console.log("parasite1 is dead");
         ChangeScoreParasiteDead()
         resetCards();
 
-    } else if (parasite2.card === cardNumber) {
+    } else if (parasite2.card === cardNumber && parasite2.alive) {
         parasite2.alive = false;
         console.log("parasite2 is dead");
         ChangeScoreParasiteDead()
         resetCards();
 
-    } else if (parasite3.card === cardNumber) {
+    } else if (parasite3.card === cardNumber && parasite3.alive) {
         parasite3.alive = false;
         console.log("parasite3 is dead");
         ChangeScoreParasiteDead()
         resetCards();
 
-    } else if (parasite4.card === cardNumber) {
+    } else if (parasite4.card === cardNumber && parasite4.alive) {
         parasite4.alive = false;
         console.log("parasite4 is dead");
         ChangeScoreParasiteDead()
         resetCards();
 
-    } else if (parasite5.card === cardNumber) {
+    } else if (parasite5.card === cardNumber && parasite5.alive) {
         parasite5.alive = false;
         console.log("parasite5 is dead");
         ChangeScoreParasiteDead()
         resetCards();
 
-    } else if (parasite6.card === cardNumber) {
+    } else if (parasite6.card === cardNumber && parasite6.alive) {
         parasite6.alive = false;
         console.log("parasite6 is dead");
         ChangeScoreParasiteDead()
         resetCards();
 
-    } else if (parasite7.card === cardNumber) {
+    } else if (parasite7.card === cardNumber && parasite7.alive) {
         console.log("parasite 7 is clicked")
         parasite7.alive = false;
         console.log("parasite7 is dead");

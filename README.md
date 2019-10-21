@@ -1,12 +1,11 @@
 # Total-Rickall
-A simple game based on the 'Total Rickall' episode of Rick & Morty. If you've never seen it, I highly recommend that you watch it.
+A simple game based on the 'Total Rickall' episode of Rick & Morty. If you've never seen it, I highly recommend watching it.
 
-* The purpose of building this game has been to learn and practice new skills as a developer.
-* This game has been created using HTML, CSS and Javascript.
+* The purpose of building this game was to practice HTML, CSS and Javascript.
 * I pulled data from a public Rick & Morty API https://rickandmortyapi.com/ using an AJAX GET request.
-* I also used the jQuery and Bootstrap frameworks. 
+* I have also used jQuery and Bootstrap. 
 
-Please help me improve my code, helping me to learn.
+I plan on rebuilding this game using React as I believe it would run much smoother.
 
 Thank you,
 Zara
