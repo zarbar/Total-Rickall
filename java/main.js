@@ -74,7 +74,7 @@ let parasite7 = {
 };
 
 //create an array of the random card numbers - numbers will be pushed to array to check that number !exist already
-const cardNumbers = [];
+let cardNumbers = [];
 
 //create array with numbers 1-9 randomised under variable "randomisedArray"
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -85,9 +85,9 @@ let peopleRemaining = 3;
 let parasitesRemaining = 1;
 
 
-//generates random number between 1-301 
+//generates random number between 1-298 
 function randomiseCardNumber() {
-    let rdn = Math.floor(Math.random() * 299) + 1;
+    let rdn = Math.floor(Math.random() * 297) + 1;
     return rdn;
 }
 
@@ -100,7 +100,21 @@ function randomApi() {
     }
     else {
         console.log('number repetition');
-        return 301
+        if (!cardNumbers.includes(299)) {
+            cardNumbers.push(299);
+            console.log('card 299 used');
+            return 299;
+        }
+        else if (!cardNumbers.includes(300)) {
+            cardNumbers.push(300);
+            console.log('card 300 used');
+            return 300;
+        }
+        else {
+            cardNumbers.push(301);
+            console.log('card 301 used');
+            return 301;
+        }
     }
 }
 
@@ -498,6 +512,8 @@ function resetGame() {
         list[i].disabled = false;
     }
 
+    cardNumbers = [];
+
     clearCards()
     $('#card1').hide();
     $('#card2').hide();
@@ -528,6 +544,9 @@ function resetGame() {
     parasite7.alive = false;
     // resetCards();
     clearCards()
+
+    document.getElementById("final_result_announcement").innerHTML = "";
+
 
 
     startGame()
