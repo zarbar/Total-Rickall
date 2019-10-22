@@ -1,6 +1,6 @@
 //execute function that generates a random character from API
-Promise.all([generateCharacter(human1.type, human1.alive), generateCharacter(human2.type, human2.alive), generateCharacter(human3.type, human3.alive), generateCharacter(parasite1.type, parasite1.alive)]);
-
+function startGame() { Promise.all([generateCharacter(human1.type, human1.alive), generateCharacter(human2.type, human2.alive), generateCharacter(human3.type, human3.alive), generateCharacter(parasite1.type, parasite1.alive)]); }
+startGame();
 
 //shuffles numbers array into different order returning a new array
 let randomisedArray = shuffle(numbers);
@@ -123,7 +123,6 @@ function kill(cardNumber) {
     $('#card8').hide();
     $('#card9').hide();
 
-
     if (human1.card === cardNumber && human1.alive) {
         human1.alive = false;
         parasite2.alive = true;
@@ -199,14 +198,37 @@ function kill(cardNumber) {
         console.log("parasite7 is dead");
         ChangeScoreParasiteDead();
         resetCards();
-    };
-
-    // checkScore();
+    }
+    //if empty space is clicked, character cards are scrambled.
+    else {
+        console.log('empty space clicked');
+        resetCards();
+    }
 }
 
 
 function resetGame() {
-    location.reload();
+
+    $('#card1').hide();
+    $('#card2').hide();
+    $('#card3').hide();
+    $('#card4').hide();
+    $('#card5').hide();
+    $('#card6').hide();
+    $('#card7').hide();
+    $('#card8').hide();
+    $('#card9').hide();
+
+    peopleRemaining = 3;
+    parasitesRemaining = 1;
+    document.getElementById("people_remaining").innerHTML = peopleRemaining;
+    document.getElementById("parasites_remaining").innerHTML = parasitesRemaining;
+    resetCards();
+
+
+
+    startGame()
+    // location.reload()
 }
 
 //event listeners for card clicks
