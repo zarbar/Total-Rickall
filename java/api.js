@@ -4,7 +4,6 @@ startGame();
 
 //shuffles numbers array into different order returning a new array
 let randomisedArray = shuffle(numbers);
-console.log(randomisedArray);
 
 function shuffle(array) {
     var tmp, current, top = array.length;
@@ -34,8 +33,6 @@ function afterClick() {
     placeCharacter(parasite5.image, parasite5.name, parasite5.type, parasite5.alive);
     placeCharacter(parasite6.image, parasite6.name, parasite6.type, parasite6.alive);
     placeCharacter(parasite7.image, parasite7.name, parasite7.type, parasite7.alive);
-
-    console.log(`h1: ${human1.card}, h2: ${human2.card}, h3: ${human3.card}, p1: ${parasite1.card}, p2: ${parasite2.card}, p3: ${parasite3.card}, p4: ${parasite4.card}, p5: ${parasite5.card}, p6: ${parasite6.card}, p7: ${parasite7.card}`);
 
 }
 
@@ -86,8 +83,6 @@ function ChangeScoreParasiteDead() {
 
 function checkScore() {
     if (peopleRemaining === 0) {
-        console.log("game lost");
-
         //final_result_announcement
         document.getElementById("final_result_announcement").innerHTML = "You Lose!";
         gameOver();
@@ -95,7 +90,6 @@ function checkScore() {
         //TRIGGER RESET BUTTON FUNCTION
 
     } else if (parasitesRemaining === 0) {
-        console.log("game won");
         document.getElementById("final_result_announcement").innerHTML = "You Win!";
         gameOver();
         //TRIGGER RESET BUTTON FUNCTION
@@ -127,7 +121,6 @@ function kill(cardNumber) {
         human1.alive = false;
         parasite2.alive = true;
         parasite3.alive = true;
-        console.log("human1 is killed, p2 & p3 have spawned");
         ChangeScoreHumanDead();
         resetCards();
         generateCharacter(parasite2.type, parasite2.alive);
@@ -138,7 +131,6 @@ function kill(cardNumber) {
         human2.alive = false;
         parasite4.alive = true;
         parasite5.alive = true;
-        console.log("human2 is dead, p4 & p5 have spawned ");
         ChangeScoreHumanDead();
         resetCards();
         generateCharacter(parasite4.type, parasite4.alive);
@@ -150,7 +142,6 @@ function kill(cardNumber) {
         human3.alive = false;
         parasite6.alive = true;
         parasite7.alive = true;
-        console.log("human3 is dead, p6 & p7 have spawned");
         ChangeScoreHumanDead();
         resetCards();
         generateCharacter(parasite6.type, parasite6.alive);
@@ -158,50 +149,41 @@ function kill(cardNumber) {
 
     } else if (parasite1.card === cardNumber && parasite1.alive) {
         parasite1.alive = false;
-        console.log("parasite1 is dead");
         ChangeScoreParasiteDead()
         resetCards();
 
     } else if (parasite2.card === cardNumber && parasite2.alive) {
         parasite2.alive = false;
-        console.log("parasite2 is dead");
         ChangeScoreParasiteDead()
         resetCards();
 
     } else if (parasite3.card === cardNumber && parasite3.alive) {
         parasite3.alive = false;
-        console.log("parasite3 is dead");
         ChangeScoreParasiteDead()
         resetCards();
 
     } else if (parasite4.card === cardNumber && parasite4.alive) {
         parasite4.alive = false;
-        console.log("parasite4 is dead");
         ChangeScoreParasiteDead()
         resetCards();
 
     } else if (parasite5.card === cardNumber && parasite5.alive) {
         parasite5.alive = false;
-        console.log("parasite5 is dead");
         ChangeScoreParasiteDead()
         resetCards();
 
     } else if (parasite6.card === cardNumber && parasite6.alive) {
         parasite6.alive = false;
-        console.log("parasite6 is dead");
         ChangeScoreParasiteDead()
         resetCards();
 
     } else if (parasite7.card === cardNumber && parasite7.alive) {
-        console.log("parasite 7 is clicked")
         parasite7.alive = false;
-        console.log("parasite7 is dead");
         ChangeScoreParasiteDead();
         resetCards();
     }
     //if empty space is clicked, character cards are scrambled.
     else {
-        console.log('empty space clicked');
         resetCards();
     }
 }
@@ -237,48 +219,38 @@ $(document).ready(
 
     //card 1 clicked
     $('#button1').on('click', function () {
-        console.log("card1 clicked");
         kill(1);
     }),
     $('#button2').on('click', function () {
-        console.log("card2 clicked");
         kill(2);
     }),
 
     $('#button3').on('click', function () {
-        console.log("card3 clicked");
         kill(3);
     }),
 
     $('#button4').on('click', function () {
-        console.log("card4 clicked");
         kill(4);
     }),
 
     $('#button5').on('click', function () {
-        console.log("card5 clicked");
         kill(5);
     }),
     $('#button6').on('click', function () {
-        console.log("card6 clicked");
         kill(6);
     }),
     $('#button7').on('click', function () {
-        console.log("card7 clicked");
         kill(7);
     }),
     $('#button8').on('click', function () {
-        console.log("card 8 clicked");
         kill(8);
     }),
     $('#button9').on('click', function () {
-        console.log("card 9 clicked");
         kill(9);
     }),
 
     $('.reset-button').on('click',
         function () {
-            console.log("refresh game");
             resetGame();
         })
 
@@ -287,8 +259,6 @@ $(document).ready(
 
 
 function gameOver() {
-    console.log("game over reset mode")
-
     var list = document.getElementsByClassName("invisible_button");
     for (var i = 0; i < list.length; i++) {
         list[i].disabled = true;
